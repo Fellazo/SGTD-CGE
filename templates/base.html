@@ -10,7 +10,7 @@
     {% endblock title %}
     </title>
     <!-- Bootstrap 5 CSS -->
-    <link href="{% static 'css/lib/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
     <!-- Bootstrap-Icons CSS -->
     {% comment %} <link href="{% static 'css/lib/bootstrap-icons.css' %}" rel="stylesheet"/> {% endcomment %}
     <!-- Static CSS -->
@@ -19,10 +19,46 @@
     {% endblock extra_head %}
 </head>
 <body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Sistema de Tesis</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Roles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tesistas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tutores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tribunales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tesis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Permisos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">No Conformidades</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
     {% block content %}{% endblock content %}
     
     <!-- Bootstrap JS -->
-    <script src="{% static 'js/lib/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <!-- Static JS -->
     <script src="{% static 'js/base.js' %}"></script>
     {% block javascript %}
